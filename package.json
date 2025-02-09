@@ -1,14 +1,16 @@
 {
-  "name": "root",
   "type": "module",
-  "version": "0.0.0",
   "private": true,
   "packageManager": "pnpm@9.0.2",
   "description": "Gravity UI base styling and components",
   "author": "blasdfaa",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/blasdfaa/gravity-vue/issues"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "engines": {
     "node": ">= 20",
     "pnpm": ">= 8",
@@ -16,7 +18,7 @@
     "npm": "Please use pnpm instead of npm to install dependencies"
   },
   "scripts": {
-    "story:dev": "pnpm --filter gravity-vue story:dev --open",
+    "story:dev": "pnpm --filter histoire story:dev --open",
     "prepublishOnly": "pnpm run test:package && pnpm run build",
     "build": "pnpm run /^build:/",
     "build:vue": "pnpm --filter gravity-vue build",
@@ -48,8 +50,7 @@
     "publint": "^0.2.7",
     "rimraf": "^5.0.5",
     "simple-git-hooks": "^2.11.1",
-    "typescript": "^5.4.5",
-    "vitest": "^2.1.9"
+    "typescript": "^5.4.5"
   },
   "resolutions": {
     "@gravity-vue/icons": "workspace:*",

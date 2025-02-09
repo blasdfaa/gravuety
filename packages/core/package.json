@@ -1,5 +1,5 @@
 {
-  "name": "gravity-vue",
+  "name": "gravuety",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@9.0.2",
@@ -33,7 +33,8 @@
     }
   },
   "files": [
-    "dist"
+    "./LICENSE",
+    "./dist"
   ],
   "scripts": {
     "build": "vite build",
@@ -48,7 +49,7 @@
     "access": "public"
   },
   "peerDependencies": {
-    "vue": ">=3.0.0"
+    "vue": ">= 3.2.0"
   },
   "dependencies": {
     "@ark-ui/vue": "3.7.2",
