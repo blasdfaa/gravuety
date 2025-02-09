@@ -53,7 +53,7 @@
   "dependencies": {
     "@ark-ui/vue": "3.7.2",
     "@bem-react/classname": "^1.6.0",
-    "@gravity-vue/icons": "1.0.0",
+    "@gravity-vue/icons": "latest",
     "@vueuse/core": "^11.0.0"
   },
   "devDependencies": {
@@ -67,6 +67,7 @@
     "typescript": "^5.4.5",
     "vite": "5.3.5",
     "vite-plugin-dts": "4.0.0-beta.2",
+    "vitest": "2.1.8",
     "vue": "3.4.35",
     "vue-tsc": "^2.0.29"
   }
