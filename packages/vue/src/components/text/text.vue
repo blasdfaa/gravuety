@@ -1,13 +1,8 @@
 <script lang="ts">
 import type { PolymorphicProps, QAProps } from '../../types'
 import type { TextColor, TextVariant } from './types'
-import type { HTMLAttributes } from 'vue'
 
-export interface TextProps extends QAProps, PolymorphicProps,
-  /**
-   * @vue-ignore
-   */
-  HTMLAttributes {
+export interface TextProps extends QAProps, PolymorphicProps {
   variant?: TextVariant
   color?: TextColor
   /**

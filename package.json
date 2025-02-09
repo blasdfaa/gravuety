@@ -51,6 +51,11 @@
     "typescript": "^5.4.5",
     "vitest": "^2.1.9"
   },
+  "resolutions": {
+    "@gravity-vue/icons": "workspace:*",
+    "@gravity-vue/nuxt": "workspace:*",
+    "gravity-vue": "workspace:*"
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
