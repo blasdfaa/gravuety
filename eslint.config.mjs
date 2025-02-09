@@ -16,6 +16,7 @@ export default antfu({
   },
   rules: {
     ...a11y.configs.recommended.rules,
+    'ts/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     'ts/consistent-type-definitions': 'off',
     'import/first': ['off'],
     'import/order': ['off'],
