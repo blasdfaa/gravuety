@@ -51,7 +51,7 @@
     "vue": ">=3.0.0"
   },
   "dependencies": {
-    "@ark-ui/vue": "3.7.2",
+    "@ark-ui/vue": "4.9.2",
     "@bem-react/classname": "^1.6.0",
     "@gravity-vue/icons": "latest",
     "@vueuse/core": "^11.0.0"
