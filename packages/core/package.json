@@ -49,28 +49,26 @@
     "access": "public"
   },
   "peerDependencies": {
-    "vue": ">= 3.2.0"
+    "vue": ">= 3.5.13"
   },
   "dependencies": {
-    "@ark-ui/vue": "4.9.2",
+    "@ark-ui/vue": "5.5.0",
     "@bem-react/classname": "^1.6.0",
     "@gravity-vue/icons": "latest",
-    "@vueuse/core": "^11.0.0"
+    "@vueuse/core": "^13.1.0"
   },
   "devDependencies": {
     "@histoire/plugin-vue": "^0.17.17",
-    "@vitejs/plugin-vue": "^5.1.2",
+    "@vitejs/plugin-vue": "^5.2.3",
     "@vue/test-utils": "^2.4.6",
     "globby": "^14.0.2",
     "histoire": "^0.17.17",
     "sass": "^1.77.8",
     "simple-git-hooks": "^2.11.1",
-    "typescript": "^5.4.5",
-    "vite": "5.3.5",
-    "vite-plugin-dts": "4.0.0-beta.2",
+    "vite": "6.2.5",
+    "vite-plugin-dts": "4.5.3",
     "vite-plugin-externalize-deps": "^0.9.0",
-    "vitest": "2.1.8",
-    "vue": "3.4.35",
-    "vue-tsc": "^2.0.29"
+    "vitest": "3.1.1",
+    "vue-tsc": "^2.2.8"
   }
 }
