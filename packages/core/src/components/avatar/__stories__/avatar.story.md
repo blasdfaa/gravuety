@@ -208,6 +208,7 @@ LANDING_BLOCK-->
 | `--g-avatar-size`             | Size (width and height) |
 | `--g-avatar-background-color` | Background color        |
 | `--g-avatar-border-color`     | Border color            |
+| `--g-avatar-border-radius`    | Border radius           |
 | `--g-avatar-color`            | Icon and text color     |
 | `--g-avatar-font-size`        | Text font size          |
 | `--g-avatar-line-height`      | Text line height        |

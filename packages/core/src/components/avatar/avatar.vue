@@ -1,7 +1,8 @@
 <script lang="ts">
-import { type HTMLAttributes, computed, ref, watch } from 'vue'
+import type { HTMLAttributes } from 'vue'
 import type { PolymorphicProps, QAProps } from '../../types'
 import type { AvatarSize, AvatarTheme, AvatarView } from './types'
+import { computed, ref, watch } from 'vue'
 
 export interface AvatarProps extends QAProps, PolymorphicProps,
   /**
@@ -38,10 +39,10 @@ export interface AvatarProps extends QAProps, PolymorphicProps,
 </script>
 
 <script setup lang="ts">
-import { avatarSizeToIconSize, avatarSizeToImgSize } from './constants'
 import { useBlock } from '../../composables'
-import { getInitials } from './utils'
 import { GIcon } from '../icon'
+import { avatarSizeToIconSize, avatarSizeToImgSize } from './constants'
+import { getInitials } from './utils'
 
 const props = withDefaults(defineProps<AvatarProps>(), {
   size: 'm',
@@ -110,6 +111,7 @@ $block: '.#{variables.$ns}avatar';
   --_font-size: var(--g-text-body-1-font-size);
   --_line-height: var(--g-text-body-1-line-height);
   --_font-weight: var(--g-text-body-font-weight);
+  --_border-radius: 50%;
 
   overflow: hidden;
   display: inline-flex;
@@ -117,7 +119,7 @@ $block: '.#{variables.$ns}avatar';
   align-items: center;
   width: var(--g-avatar-size, var(--_size));
   height: var(--g-avatar-size, var(--_size));
-  border-radius: 50%;
+  border-radius: var(--g-avatar-border-radius, var(--_border-radius));
   background-color: var(--g-avatar-background-color, var(--_background-color));
 
   &__image {
@@ -152,7 +154,7 @@ $block: '.#{variables.$ns}avatar';
       z-index: 1;
       position: absolute;
       inset: 0;
-      border-radius: 50%;
+      border-radius: var(--g-avatar-border-radius, var(--_border-radius));
     }
 
     &::before {
