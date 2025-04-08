@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "includes": ["../packages/core/src/**/*.vue", "../packages/core/src/**/*.ts"]
+}

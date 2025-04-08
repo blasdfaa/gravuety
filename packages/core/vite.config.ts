@@ -4,12 +4,14 @@ import path from 'node:path'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import Vue from '@vitejs/plugin-vue'
-import pkg from './package.json' assert { type: 'json' }
+import { externalizeDeps } from 'vite-plugin-externalize-deps'
 
 export default defineConfig({
   plugins: [
+    externalizeDeps(),
     Vue(),
     dts({
+      exclude: ['**/*.stories.*', '**/*.test.*', '**/tests/*', '**/examples/*', '**/setup-test.ts'],
       entryRoot: 'src',
       staticImport: true,
       cleanVueFileName: true,
@@ -39,13 +41,6 @@ export default defineConfig({
           entryFileNames: '[name].js',
         },
       ],
-      external: [
-        'vue',
-      ],
-      // external: [
-      //   ...Object.keys(pkg.dependencies ?? {}),
-      //   ...Object.keys(pkg.peerDependencies ?? {}),
-      // ],
     },
   },
   test: {

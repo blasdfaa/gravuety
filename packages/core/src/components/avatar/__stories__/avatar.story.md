@@ -64,7 +64,7 @@ This component can be used to render avatars using icons. Provide the icon via `
 
 <ExampleBlock
     code={`
-import {GraduationCap} from '@gravity-ui/icons';
+import {GraduationCap} from '@gravuety/icons';
 
 <Avatar icon={GraduationCap} size="l" />
 `}
@@ -105,7 +105,7 @@ Default view: `filled`
 
 <ExampleBlock
     code={`
-import {GraduationCap} from '@gravity-ui/icons';
+import {GraduationCap} from '@gravuety/icons';
 
 <Avatar icon={GraduationCap} size="l" theme="normal" view="filled" />
 <Avatar icon={GraduationCap} size="l" theme="brand" view="filled" />

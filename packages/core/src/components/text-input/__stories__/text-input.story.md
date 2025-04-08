@@ -5,7 +5,7 @@
 <!--/GITHUB_BLOCK-->
 
 ```ts
-import { TextInput } from '@gravity-ui/uikit'
+import { TextInput } from 'gravuety'
 ```
 
 TextInput allow users to enter text into a UI.
