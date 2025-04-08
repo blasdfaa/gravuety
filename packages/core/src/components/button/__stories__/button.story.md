@@ -5,7 +5,7 @@
 <!--/GITHUB_BLOCK-->
 
 ```ts
-import { Button } from '@gravity-ui/uikit'
+import { Button } from 'gravuety'
 ```
 
 Buttons act as a trigger for certain actions. While this is their main purpose, in very rare cases,

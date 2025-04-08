@@ -21,8 +21,7 @@
     "story:dev": "pnpm --filter histoire story:dev --open",
     "prepublishOnly": "pnpm run test:package && pnpm run build",
     "build": "pnpm run /^build:/",
-    "build:vue": "pnpm --filter gravity-vue build",
-    "build:nuxt": "pnpm --filter nuxt build",
+    "build:vue": "pnpm --filter gravuety build",
     "build:icons": "pnpm --filter icons build",
     "lint": "eslint . --cache",
     "lint:fix": "pnpm run lint --fix",
@@ -53,9 +52,9 @@
     "typescript": "^5.4.5"
   },
   "resolutions": {
-    "@gravity-vue/icons": "workspace:*",
-    "@gravity-vue/nuxt": "workspace:*",
-    "gravity-vue": "workspace:*"
+    "@gravuety/icons": "workspace:*",
+    "@gravuety/nuxt": "workspace:*",
+    "gravuety": "workspace:*"
   },
   "commitlint": {
     "extends": [

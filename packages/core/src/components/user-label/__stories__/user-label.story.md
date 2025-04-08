@@ -45,7 +45,7 @@ This component can be used with a custom avatar. It works only with `type: 'pers
 <!--LANDING_BLOCK
 <ExampleBlock
     code={`
-import {GraduationCap} from '@gravity-ui/icons';
+import {GraduationCap} from '@gravuety/icons';
 
 <UserLabel type="person" avatar="<url>">Charles Darwin</UserLabel>
 <UserLabel type="person" avatar={{icon: GraduationCap}}>Charles Darwin</UserLabel>
@@ -59,7 +59,7 @@ LANDING_BLOCK-->
 <!--GITHUB_BLOCK-->
 
 ```vue
-import { GraduationCap } from '@gravity-vue/icons';
+import { GraduationCap } from '@gravuety/icons';
 
 <UserLabel type="person" avatar="<url>">
  Charles Darwin

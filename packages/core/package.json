@@ -68,6 +68,7 @@
     "typescript": "^5.4.5",
     "vite": "5.3.5",
     "vite-plugin-dts": "4.0.0-beta.2",
+    "vite-plugin-externalize-deps": "^0.9.0",
     "vitest": "2.1.8",
     "vue": "3.4.35",
     "vue-tsc": "^2.0.29"
