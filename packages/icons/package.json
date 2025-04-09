@@ -5,12 +5,12 @@
   "author": "Viktor Zdorovtsev",
   "license": "MIT",
   "funding": "https://github.com/sponsors/blasdfaa",
-  "homepage": "https://github.com/blasdfaa/gravity-vue#readme",
+  "homepage": "https://github.com/blasdfaa/gravuety#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blasdfaa/gravity-vue.git"
+    "url": "git+https://github.com/blasdfaa/gravuety.git"
   },
-  "bugs": "https://github.com/blasdfaa/gravity-vue/issues",
+  "bugs": "https://github.com/blasdfaa/gravuety/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {

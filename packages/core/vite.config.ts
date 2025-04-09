@@ -1,9 +1,9 @@
 /// <reference types="vitest" />
 
 import path from 'node:path'
+import Vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
-import Vue from '@vitejs/plugin-vue'
 import { externalizeDeps } from 'vite-plugin-externalize-deps'
 
 export default defineConfig({
