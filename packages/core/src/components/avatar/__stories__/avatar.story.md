@@ -5,7 +5,7 @@
 <!--/GITHUB_BLOCK-->
 
 ```vue
-import { Avatar } from 'gravity-vue'
+import { Avatar } from 'gravuety'
 ```
 
 The component intended to render avatars. It has three basic types of avatars: image, icon and text (initials). All of these types have special props to configure behaviour and appearance.

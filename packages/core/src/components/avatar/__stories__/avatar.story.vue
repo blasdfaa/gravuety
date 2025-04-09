@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FaceRobot } from '@gravity-vue/icons'
+import { FaceRobot } from '@gravuety/icons'
 import Avatar from '../avatar.vue'
 </script>
 
@@ -7,7 +7,7 @@ import Avatar from '../avatar.vue'
   <Story
     group="components"
     title="Data Display / Avatar"
-    :layout="{ type: 'grid', width: 100 }"
+    :layout="{ type: 'grid', width: 150 }"
   >
     <Variant title="Basic">
       <Avatar img-url="https://loremflickr.com/640/480" />
