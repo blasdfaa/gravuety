@@ -1,12 +1,12 @@
 <script lang="ts">
 import type { ButtonHTMLAttributes } from 'vue'
+import type { QAProps } from '../../types'
 import type {
   ButtonPin,
   ButtonSize,
   ButtonView,
   ButtonWidth,
 } from './types'
-import type { QAProps } from '../../types'
 import { useBlock } from '../../composables'
 
 export interface ButtonProps extends
@@ -117,12 +117,8 @@ $block: '.#{variables.$ns}button';
     position: absolute;
     z-index: -1;
     inset: 0;
-    background-color: var(
-      --g-button-background-color,
-      var(--_--background-color)
-    );
-    border: var(--g-button-border-width, var(--_--border-width))
-      var(--g-button-border-style, solid)
+    background-color: var(--g-button-background-color, var(--_--background-color));
+    border: var(--g-button-border-width, var(--_--border-width)) var(--g-button-border-style, solid)
       var(--g-button-border-color, var(--_--border-color));
     transition: background-color 0.15s linear;
   }
@@ -131,21 +127,14 @@ $block: '.#{variables.$ns}button';
     color: var(--g-button-text-color-hover, var(--_--text-color-hover));
 
     &::before {
-      background-color: var(
-        --g-button-background-color-hover,
-        var(--_--background-color-hover)
-      );
+      background-color: var(--g-button-background-color-hover, var(--_--background-color-hover));
     }
   }
 
   &:focus-visible::before {
     outline: var(--g-button-focus-outline-color, var(--_--focus-outline-color))
-      var(--g-button-focus-outline-style, solid)
-      var(--g-button-focus-outline-width, 2px);
-    outline-offset: var(
-      --g-button-focus-outline-offset,
-      var(--_--focus-outline-offset)
-    );
+      var(--g-button-focus-outline-style, solid) var(--g-button-focus-outline-width, 2px);
+    outline-offset: var(--g-button-focus-outline-offset, var(--_--focus-outline-offset));
   }
 
   &::after {
@@ -333,11 +322,7 @@ $block: '.#{variables.$ns}button';
     }
   }
 
-  @include mixins.pin(
-    $block,
-    (&, '::before', '::after'),
-    var(--g-button-border-radius, var(--_--border-radius))
-  );
+  @include mixins.pin($block, (&, '::before', '::after'), var(--g-button-border-radius, var(--_--border-radius)));
 
   &__text {
     display: inline-block;
@@ -347,15 +332,7 @@ $block: '.#{variables.$ns}button';
   &__icon {
     display: inline-block;
     position: relative;
-    margin: 0
-      calc(
-        (
-            var(--g-button-height, var(--_--height)) - var(
-                --g-button-icon-size,
-                var(--_--icon-size)
-              )
-          ) / 2 * -1
-      );
+    margin: 0 calc((var(--g-button-height, var(--_--height)) - var(--g-button-icon-size, var(--_--icon-size))) / 2 * -1);
     width: var(--g-button-height, var(--_--height));
     height: var(--g-button-height, var(--_--height));
 
@@ -440,11 +417,7 @@ $block: '.#{variables.$ns}button';
       --_--border-width: 0;
     }
 
-    &:not(
-        #{$block}_view_normal-contrast,
-        #{$block}_view_flat-contrast,
-        #{$block}_view_outlined-contrast
-      ) {
+    &:not(#{$block}_view_normal-contrast, #{$block}_view_flat-contrast, #{$block}_view_outlined-contrast) {
       --_--text-color: var(--g-color-text-brand-heavy);
       --_--background-color: var(--g-color-base-selection);
       --_--background-color-hover: var(--g-color-base-selection-hover);

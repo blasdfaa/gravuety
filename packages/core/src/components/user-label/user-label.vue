@@ -19,12 +19,12 @@ export type UserLabelEmits = {
 </script>
 
 <script setup lang="ts">
+import { Envelope, Xmark } from '@gravuety/icons'
 import { computed, getCurrentInstance } from 'vue'
 import { useBlock } from '../../composables'
-import { GIcon } from '../icon'
-import { Envelope, Xmark } from '@gravity-vue/icons'
 import { slotIsText } from '../../utils/slot-is-text'
 import { GAvatar } from '../avatar'
+import { GIcon } from '../icon'
 
 const props = withDefaults(defineProps<UserLabelProps>(), {
   size: 's',

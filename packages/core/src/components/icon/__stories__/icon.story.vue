@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Envelope, Gear, Rocket } from '@gravity-vue/icons'
+import { Envelope, Gear, Rocket } from '@gravuety/icons'
 
 import Icon from '../icon.vue'
 

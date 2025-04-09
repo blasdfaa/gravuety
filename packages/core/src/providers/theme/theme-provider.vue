@@ -20,8 +20,8 @@ const b = block('root')
 </script>
 
 <script setup lang="ts">
-import { toRefs } from 'vue'
 import { useColorMode } from '@vueuse/core'
+import { toRefs } from 'vue'
 import { provideThemeProviderContext } from './context'
 
 const props = withDefaults(defineProps<ThemeProviderProps>(), {

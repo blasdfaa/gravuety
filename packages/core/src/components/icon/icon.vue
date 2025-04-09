@@ -1,7 +1,7 @@
 <script lang="ts">
 import type { QAProps } from '../../types'
-import { computed } from 'vue'
 import type { IconData, SVGDementions } from './types'
+import { computed } from 'vue'
 import { useBlock } from '../../composables'
 import { getDementions, isComponentSvgData, isSpriteData, isStringSvgData, prepareStringData } from './utils'
 

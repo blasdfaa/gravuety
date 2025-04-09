@@ -5,7 +5,7 @@
 <!--/GITHUB_BLOCK-->
 
 ```tsx
-import { Overlay } from 'gravity-vue'
+import { Overlay } from 'gravuety'
 ```
 
 The `Overlay` component renders an overlay over the parent element with relative position,
@@ -14,8 +14,8 @@ For example, it can be used to preserve the desired layout while loading data.
 
 ```vue
 <script lang="ts" setup>
+import { Box, Loader, Overlay } from 'gravuety'
 import { ref } from 'vue'
-import { Box, Loader, Overlay } from 'gravity-vue'
 
 const loading = ref(true)
 </script>

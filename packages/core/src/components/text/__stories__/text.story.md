@@ -5,7 +5,7 @@
 <!--/GITHUB_BLOCK-->
 
 ```vue
-import { Text } from 'gravity-vue'
+import { Text } from 'gravuety'
 ```
 
 ## Variant
