@@ -1,7 +1,7 @@
-import { HstVue } from '@histoire/plugin-vue'
 import { resolve } from 'node:path'
-import { defineConfig } from 'vite'
+import { HstVue } from '@histoire/plugin-vue'
 import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite'
 
 const projectRootDir = resolve(__dirname)
 
@@ -22,11 +22,6 @@ export default defineConfig({
     },
     theme: {
       title: 'Gravuety UI',
-      logo: {
-        square: '../docs/content/public/logo.svg',
-        light: '../docs/content/public/logo.svg',
-        dark: '../docs/content/public/logo.svg',
-      },
     },
   },
 
