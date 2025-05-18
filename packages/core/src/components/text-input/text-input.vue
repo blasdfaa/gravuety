@@ -1,14 +1,17 @@
 <script lang="ts">
-import { type InputHTMLAttributes, computed } from 'vue'
-import type { TextInputPin, TextInputSize, TextInputView } from './types'
+import type { InputHTMLAttributes } from 'vue'
 import type { QAProps } from '../../types'
-import { ControlOuterContent } from '../control-outer-content'
+import type { TextInputPin, TextInputSize, TextInputView } from './types'
+import { computed } from 'vue'
 import { useBlock, useId } from '../../composables'
+import { ControlOuterContent } from '../control-outer-content'
 
 export interface TextInputProps extends
   QAProps,
   /** @vue-ignore */
   InputHTMLAttributes {
+  /** @default null */
+  modelValue?: string | null
   id?: string
   /**
    * Help text rendered to the left of the input node
@@ -31,7 +34,7 @@ export interface TextInputProps extends
    * Shows icon for clearing control's value
    * @default false
    */
-  // hasClear?: boolean
+  hasClear?: boolean
   /**
    * The control's border view.
    * @default 'round-round'
@@ -52,10 +55,11 @@ export interface TextInputProps extends
    * An optional element displayed under the lower right corner of the control and sharing the place with the error container
    */
   note?: string
+  controlClass?: string
 }
 
 export type TextInputEmits = {
-  update: [value: string]
+  'update:modelValue': [event: Event]
 }
 
 export type TextInputSlots = {
@@ -72,6 +76,7 @@ defineOptions({
 })
 
 const props = withDefaults(defineProps<TextInputProps>(), {
+  modelValue: null,
   view: 'normal',
   size: 'm',
   pin: 'round-round',
@@ -81,9 +86,9 @@ const props = withDefaults(defineProps<TextInputProps>(), {
   type: 'text',
 })
 
-const slots = defineSlots<TextInputSlots>()
+const emits = defineEmits<TextInputEmits>()
 
-const modelValue = defineModel<string>()
+const slots = defineSlots<TextInputSlots>()
 
 const { attrs, b } = useBlock('text-input')
 
@@ -93,7 +98,7 @@ const hasErrorMessage = computed(() => Boolean(props.errorMessage || slots?.erro
 const hasNote = computed(() => Boolean(props.note || slots?.note))
 
 const isLabelVisible = computed(() => Boolean(props.label))
-const isClearControlVisible = computed(() => Boolean(props.hasClear && !props.disabled && modelValue.value))
+const isClearControlVisible = computed(() => Boolean(props.hasClear && !props.disabled && props.modelValue))
 // const isInvalidWithMessage = computed(() => props.validationState === 'invalid' && hasErrorMessage.value)
 // const isErrorMessageVisible = computed(() => isInvalidWithMessage.value && props.errorPlacement === 'outside')
 // const isErrorIconVisible = computed(() => isInvalidWithMessage.value && props.errorPlacement === 'inside')
@@ -126,11 +131,13 @@ const noteId = useId()
         :for="id"
         :class="b('label')"
       />
+
       <input
         :id="id"
-        v-model="modelValue"
-        :class="b('control', { type: 'input' })"
+        :class="b('control', { type: 'input' }, controlClass)"
+        :value="modelValue"
         v-bind="attrs"
+        @input="emits('update:modelValue', $event)"
       >
     </span>
 
@@ -142,6 +149,7 @@ const noteId = useId()
       <template #note>
         <slot name="note">{{ note }}</slot>
       </template>
+
       <template #errorMessage>
         <slot name="errorMessage">{{ errorMessage }}</slot>
       </template>
@@ -213,29 +221,19 @@ $block: '.#{variables.$ns}text-input';
     overflow: hidden;
     display: flex;
     width: 100%;
-    background-color: var(
-      --g-text-input-background-color,
-      var(--_background-color)
-    );
+    background-color: var(--g-text-input-background-color, var(--_background-color));
     border-width: var(--g-text-input-border-width, var(--_border-width));
     border-style: solid;
     border-color: var(--g-text-input-border-color, var(--_border-color));
     color: var(--g-text-input-text-color, var(--_text-color));
 
     &:hover {
-      border-color: var(
-        --g-text-input-border-color-hover,
-        var(--_border-color-hover)
-      );
+      border-color: var(--g-text-input-border-color-hover, var(--_border-color-hover));
     }
 
     &:focus-within {
-      border-color: var(
-        --g-text-input-border-color-active,
-        var(--_border-color-active)
-      );
-      outline: 2px solid
-        var(--g-text-input-focus-outline-color, var(--_focus-outline-color));
+      border-color: var(--g-text-input-border-color-active, var(--_border-color-active));
+      outline: 2px solid var(--g-text-input-focus-outline-color, var(--_focus-outline-color));
       outline-offset: -1px;
     }
   }
